@@ -18,7 +18,7 @@ EggyUI-SE 是一个个人/小团队维护的开源美化项目，专注于以不
 
 - **GitHub Issues**：在本仓库提交私密 Issue（勾选“只有维护者可见”）
 - **QQ 交流群**：联系群管理员（请注明“安全报告”）
-- **哔哩哔哩**：私信 [栖小光自媒](https://space.bilibili.com/3690976851790561) 或 [EggyUI](https://space.bilibili.com/3691000371349632)
+- **哔哩哔哩**：私信 [栖小光自媒](https://space.bilibili.com/3690976851790561) 或 [WinNT-DWM-Sharp](https://space.bilibili.com/3706958846626741)
 
 我们承诺在收到报告后尽快确认问题，并在修复后公开致谢（如报告者同意）。
 
@@ -43,7 +43,7 @@ EggyUI-SE 是一个个人/小团队维护的开源美化项目，专注于以不
 ## 联系方式
 
 - **GitHub**：[QiXiaoLight](https://github.com/QiXiaoLight)
-- **哔哩哔哩**：[栖小光自媒](https://space.bilibili.com/3690976851790561)、[EggyUI](https://space.bilibili.com/3691000371349632)
+- **哔哩哔哩**：[栖小光自媒](https://space.bilibili.com/3690976851790561)、[WinNT-DWM-Sharp](https://space.bilibili.com/3706958846626741)
 - **QQ 交流群**：[EggyUI-SE交流群](https://qm.qq.com/q/DzX7VXZNMQ)
 - **腾讯频道**：[EggyUISE](https://pd.qq.com/s/5ryka2vhl)
 - **项目仓库**：EggyUI-SE

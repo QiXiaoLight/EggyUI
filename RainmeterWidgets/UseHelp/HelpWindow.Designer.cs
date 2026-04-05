@@ -40,33 +40,40 @@
             // 
             TipLabel.AutoSize = true;
             TipLabel.Font = new Font("Microsoft YaHei UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
-            TipLabel.Location = new Point(8, 4);
+            TipLabel.Location = new Point(21, 9);
+            TipLabel.Margin = new Padding(8, 0, 8, 0);
             TipLabel.Name = "TipLabel";
-            TipLabel.Size = new Size(330, 25);
+            TipLabel.Size = new Size(831, 62);
             TipLabel.TabIndex = 3;
             TipLabel.Text = "已列出部分常见问题，希望能帮助您~";
             // 
             // HelpListView
             // 
-            HelpListView.Location = new Point(8, 40);
+            HelpListView.Anchor = AnchorStyles.Top | AnchorStyles.Bottom | AnchorStyles.Left | AnchorStyles.Right;
+            HelpListView.Location = new Point(21, 92);
+            HelpListView.Margin = new Padding(8, 7, 8, 7);
             HelpListView.Name = "HelpListView";
-            HelpListView.Size = new Size(586, 300);
+            HelpListView.Size = new Size(1501, 683);
             HelpListView.TabIndex = 0;
             // 
             // DecorationIcon
             // 
-            DecorationIcon.Location = new Point(560, 4);
+            DecorationIcon.Anchor = AnchorStyles.Top | AnchorStyles.Right;
+            DecorationIcon.Location = new Point(1440, 9);
+            DecorationIcon.Margin = new Padding(8, 7, 8, 7);
             DecorationIcon.Name = "DecorationIcon";
-            DecorationIcon.Size = new Size(32, 32);
+            DecorationIcon.Size = new Size(82, 73);
             DecorationIcon.SizeMode = PictureBoxSizeMode.Zoom;
             DecorationIcon.TabIndex = 2;
             DecorationIcon.TabStop = false;
             // 
             // CloseButton
             // 
-            CloseButton.Location = new Point(512, 348);
+            CloseButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            CloseButton.Location = new Point(1317, 798);
+            CloseButton.Margin = new Padding(8, 7, 8, 7);
             CloseButton.Name = "CloseButton";
-            CloseButton.Size = new Size(80, 40);
+            CloseButton.Size = new Size(206, 92);
             CloseButton.TabIndex = 2;
             CloseButton.Text = "关闭";
             CloseButton.UseVisualStyleBackColor = true;
@@ -74,24 +81,28 @@
             // 
             // OnlineHelpButton
             // 
-            OnlineHelpButton.Location = new Point(426, 348);
+            OnlineHelpButton.Anchor = AnchorStyles.Bottom | AnchorStyles.Right;
+            OnlineHelpButton.Location = new Point(1095, 798);
+            OnlineHelpButton.Margin = new Padding(8, 7, 8, 7);
             OnlineHelpButton.Name = "OnlineHelpButton";
-            OnlineHelpButton.Size = new Size(80, 40);
+            OnlineHelpButton.Size = new Size(206, 92);
             OnlineHelpButton.TabIndex = 1;
             OnlineHelpButton.Text = "联机帮助";
             OnlineHelpButton.UseVisualStyleBackColor = true;
+            OnlineHelpButton.Click += OnlineHelpButton_Click;
             // 
             // HelpWindow
             // 
-            AutoScaleDimensions = new SizeF(7F, 17F);
+            AutoScaleDimensions = new SizeF(18F, 39F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(600, 400);
+            ClientSize = new Size(1543, 918);
             Controls.Add(OnlineHelpButton);
             Controls.Add(CloseButton);
             Controls.Add(DecorationIcon);
             Controls.Add(HelpListView);
             Controls.Add(TipLabel);
             FormBorderStyle = FormBorderStyle.FixedDialog;
+            Margin = new Padding(8, 7, 8, 7);
             MaximizeBox = false;
             Name = "HelpWindow";
             ShowIcon = false;
