@@ -1,10 +1,17 @@
+<div align="center">
+
+![EggyUI 宣传图](https://eggyuihub.wordpress.com/wp-content/uploads/2026/04/eggyui-poster.jpg)
+
 # EggyUI
 
-![Last Commit](https://img.shields.io/github/last-commit/QiXiaoLight/EggyUI)
+![Last Commit](https://img.shields.io/github/last-commit/QiXiaoLight/EggyUI?label=最近提交)
 ![Windows Support](https://img.shields.io/badge/Windows-Supported-blue)
-![GPL-3.0](https://img.shields.io/badge/Code-GPL--3.0-blue.svg)
+[![QQ 群](https://img.shields.io/badge/QQ群-1090050382-blue)](https://qm.qq.com/q/DzX7VXZNMQ)
+[![License](https://img.shields.io/badge/代码许可证-GPL%20v3-yellow)](LICENSE.txt)
 
-> 不修改系统核心文件，延续蛋仔视觉美学。
+不修改系统核心文件，延续蛋仔视觉美学。
+
+</div>
 
 ## 项目简介
 
@@ -20,7 +27,8 @@ EggyUI 以**独立安装包**的形式在已有 Windows 系统上部署，让用
 | 主题包 | Windows 7 ~ Windows 11 |
 | Rainmeter 小组件 | Windows 10 1607 ~ Windows 11 |
 
-更多附加美化组件可从 [EggyUI Hub](https://eggyuihub.wordpress.com/) 下载。
+> [!TIP]
+> EggyUI 的扩展美化组件可从 [EggyUI Hub](https://eggyuihub.wordpress.com/) 下载。建议搭配这些组件使用以获得最佳体验。
 
 ## 历史背景
 
