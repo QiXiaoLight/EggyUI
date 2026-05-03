@@ -33,13 +33,14 @@
             DecorationIcon = new PictureBox();
             CloseButton = new Button();
             OnlineHelpButton = new Button();
+            InfoLabel = new Label();
             ((System.ComponentModel.ISupportInitialize)DecorationIcon).BeginInit();
             SuspendLayout();
             // 
             // TipLabel
             // 
             TipLabel.AutoSize = true;
-            TipLabel.Font = new Font("Microsoft YaHei UI", 14.25F, FontStyle.Regular, GraphicsUnit.Point);
+            TipLabel.Font = new Font("Microsoft YaHei UI", 14.25F);
             TipLabel.Location = new Point(21, 9);
             TipLabel.Margin = new Padding(8, 0, 8, 0);
             TipLabel.Name = "TipLabel";
@@ -91,11 +92,21 @@
             OnlineHelpButton.UseVisualStyleBackColor = true;
             OnlineHelpButton.Click += OnlineHelpButton_Click;
             // 
+            // InfoLabel
+            // 
+            InfoLabel.AutoSize = true;
+            InfoLabel.Location = new Point(21, 798);
+            InfoLabel.Name = "InfoLabel";
+            InfoLabel.Size = new Size(197, 78);
+            InfoLabel.TabIndex = 4;
+            InfoLabel.Text = "程序版本：\r\n运行时版本：";
+            // 
             // HelpWindow
             // 
             AutoScaleDimensions = new SizeF(18F, 39F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1543, 918);
+            Controls.Add(InfoLabel);
             Controls.Add(OnlineHelpButton);
             Controls.Add(CloseButton);
             Controls.Add(DecorationIcon);
@@ -108,6 +119,7 @@
             ShowIcon = false;
             StartPosition = FormStartPosition.CenterScreen;
             Text = "手册";
+            FormClosed += HelpWindow_FormClosed;
             Load += Form1_Load;
             ((System.ComponentModel.ISupportInitialize)DecorationIcon).EndInit();
             ResumeLayout(false);
@@ -121,5 +133,6 @@
         private PictureBox DecorationIcon;
         private Button CloseButton;
         private Button OnlineHelpButton;
+        private Label InfoLabel;
     }
 }

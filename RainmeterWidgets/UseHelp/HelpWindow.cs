@@ -4,16 +4,53 @@ using System.IO;
 using System.Linq;
 using System.Windows.Forms;
 using System.Xml.Linq;
+using System.Runtime.InteropServices;
 
 namespace UseHelp
 {
     public partial class HelpWindow : Form
     {
+        // 程序版本
+        private const string programVersion = "1.0";
+
+        // 字体缓存
+        private FontCache fontCache = FontCache.Instance;
+
+        /// <summary>
+        /// 构造函数
+        /// </summary>
         public HelpWindow()
         {
             InitializeComponent();
+
+            DecorationIcon.Image = SystemIcons.Information.ToBitmap();
+            InfoLabel.Text = $"程序版本：{programVersion}\n运行时版本：{RuntimeInformation.FrameworkDescription}";
         }
 
+        /// <summary>
+        /// 访问联机帮助
+        /// </summary>
+        private void VisitOnlineHelp()
+        {
+            try
+            {
+                // 使用默认浏览器打开联机帮助页面
+                _ = Process.Start(new ProcessStartInfo()
+                {
+                    FileName = "https://eggyui-help.neocities.org/", // Redirect Link
+                    UseShellExecute = true
+                });
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"联机帮助访问失败：{ex.Message}", "提示",
+                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
+        }
+
+        /// <summary>
+        /// 从XML文件加载帮助内容
+        /// </summary>
         private void LoadHelpFromXML()
         {
             // 尝试加载 HelpContent.xml 并将节点添加到 HelpListView
@@ -65,10 +102,24 @@ namespace UseHelp
             }
         }
 
+        private void ApplyFont()
+        {
+            string preferredFontName = "方正兰亭圆简体_中";
+            foreach (var control in this.Controls.OfType<Control>())
+            {
+                // Preserve the current font size and style
+                float fontSize = control.Font.Size;
+                FontStyle fontStyle = control.Font.Style;
+                GraphicsUnit graphicsUnit = control.Font.Unit;
+
+                // Get the preferred font or fallback
+                control.Font = fontCache.GetFont(preferredFontName, fontSize, fontStyle, graphicsUnit);
+            }
+        }
+
         private void Form1_Load(object sender, EventArgs e)
         {
-            DecorationIcon.Image = SystemIcons.Information.ToBitmap();
-
+            ApplyFont();
             try
             {
                 LoadHelpFromXML();
@@ -77,29 +128,11 @@ namespace UseHelp
             {
                 // 加载帮助内容失败，提示用户并提供访问联机帮助的选项
                 if (MessageBox.Show($"加载帮助内容失败：{ex.Message}\n是否要打开联机帮助？", "提示",
-                    MessageBoxButtons.OKCancel, MessageBoxIcon.Warning) == DialogResult.OK)
+                    MessageBoxButtons.YesNo, MessageBoxIcon.Warning) == DialogResult.Yes)
                 {
                     VisitOnlineHelp();
                 }
                 this.Close();
-            }
-        }
-
-        private void VisitOnlineHelp()
-        {
-            try
-            {
-                // 使用默认浏览器打开联机帮助页面
-                _ = Process.Start(new ProcessStartInfo()
-                {
-                    FileName = "https://qixiaolight.mysxl.cn/", // 临时地址，后面会替换成正式的帮助文档地址
-                    UseShellExecute = true
-                });
-            }
-            catch (Exception ex)
-            {
-                MessageBox.Show($"联机帮助访问失败：{ex.Message}", "提示",
-                    MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
         }
 
@@ -111,6 +144,12 @@ namespace UseHelp
         private void OnlineHelpButton_Click(object sender, EventArgs e)
         {
             VisitOnlineHelp();
+        }
+
+        private void HelpWindow_FormClosed(object sender, FormClosedEventArgs e)
+        {
+            fontCache.ClearAll();
+            fontCache.Dispose();
         }
     }
 }

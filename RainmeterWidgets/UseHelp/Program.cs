@@ -3,13 +3,15 @@ using System.Runtime.InteropServices;
 
 namespace UseHelp
 {
-    internal static class Program
+    internal static partial class Program
     {
-        [DllImport("user32.dll")]
-        private static extern bool SetForegroundWindow(IntPtr hWnd);
-
-        [DllImport("user32.dll")]
-        private static extern bool ShowWindowAsync(IntPtr hWnd, int nCmdShow);
+        [LibraryImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        private static partial bool SetForegroundWindow(IntPtr hWnd);
+        
+        [LibraryImport("user32.dll")]
+        [return: MarshalAs(UnmanagedType.Bool)]
+        private static partial bool ShowWindowAsync(IntPtr hWnd, int nCmdShow);
 
         private const int SW_RESTORE = 9;
         private const string MutexName = @"Global\UseHelp";

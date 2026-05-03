@@ -13,6 +13,9 @@
 
 </div>
 
+> [!NOTE]
+> 由于栖小光已退出 EggyUI 项目组，这部分的开发已经停止。如需获取后续更新，请移步至 [EggyUI-RE](https://github.com/CN-RBL/EggyUI-RE) 项目。
+
 ## 项目简介
 
 EggyUI 是 EggyUI 生态的主项目，专注于以**不修改系统核心文件**的方式实现蛋仔派对风格的 Windows 桌面美化。本项目由新开发团队于 2026 年 4 月 11 日以 EggyUI-SE 为基础变基而来，原仓库已归档为 [EggyUI-Legacy](https://github.com/SYSTEM-LIGHT/EggyUI-Legacy)。
@@ -28,7 +31,7 @@ EggyUI 以**独立安装包**的形式在已有 Windows 系统上部署，让用
 | Rainmeter 小组件 | Windows 10 1607 ~ Windows 11 |
 
 > [!TIP]
-> EggyUI 的扩展美化组件可从 [EggyUI Hub](https://eggyuihub.wordpress.com/) 下载。建议搭配这些组件使用以获得最佳体验。
+> EggyUI 的扩展美化组件可从 [EggyUI Hub](https://eggyuihub.wordpress.com/) 下载，建议搭配这些组件使用以获得最佳体验。
 
 ## 历史背景
 

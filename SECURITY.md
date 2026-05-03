@@ -1,8 +1,11 @@
 # EggyUI 安全策略
 
 ## 支持版本
+> [!NOTE]
+> 由于栖小光已退出 EggyUI 项目组，这一部分的开发已经停止。如需获取后续更新，请移步至 [EggyUI-RE](https://github.com/CN-RBL/EggyUI-RE) 项目。
+
 > [!CAUTION]
-> EggyUI 的旧版本已不受支持，请使用新版 EggyUI。使用旧版本的 EggyUI 可能存在安全风险。
+> EggyUI 的旧版本已不受支持，请使用新版 EggyUI。旧版本的 EggyUI 可能存在安全风险。
 
 |版本|支持|
 |----|----|
